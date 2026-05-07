@@ -2,7 +2,7 @@
 
 Static site for the Local Fold app's legal documents.
 
-Live at <https://wzslr821.github.io/LocalFold/>.
+Live at <https://wzslr321.github.io/LocalFold/>.
 
 - `index.html` — landing page with links to the privacy policies.
 - `privacy.html` — Privacy Policy (English).
