@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polityka prywatności — Local Fold</title>
+  <meta name="description" content="Polityka prywatności aplikacji Local Fold na iOS.">
+  <style>
+    :root {
+      --bg: #FAF7F1;
+      --bg-elev: #F4EFE5;
+      --ink: #14170F;
+      --ink-muted: #5A5E51;
+      --rule: rgba(20, 23, 15, 0.08);
+      --accent: #2E5326;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+      font-feature-settings: "tnum" 1, "lnum" 1;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 1.25;
+      margin: 40px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 1.3;
+      margin: 24px 0 8px;
+    }
+    p, ul, ol { margin: 0 0 16px; }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+    strong { color: var(--ink); }
+    .meta {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+    .lang-toggle {
+      color: var(--ink-muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      margin: 0 0 32px;
+    }
+    .lang-toggle strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .lang-toggle a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+    }
+    .lang-toggle a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+    .footer a { color: var(--ink-muted); }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14170F;
+        --bg-elev: #1C1F18;
+        --ink: #F0EDE5;
+        --ink-muted: #98998D;
+        --rule: rgba(240, 237, 229, 0.1);
+        --accent: #8FB87A;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Local Fold</p>
+  <h1>Polityka prywatności</h1>
+  <p class="meta">Ostatnia aktualizacja: 7 maja 2026 r.</p>
+  <p class="lang-toggle"><a href="privacy.html">EN</a> · <strong>PL</strong></p>
+
+  <h2>1. Kim jesteśmy</h2>
+  <p>Local Fold jest tworzone przez Wiktora Zająca (Polska) jako niezależnego dewelopera. Odniesienia do „my", „nas" lub „Local Fold" oznaczają dewelopera w jego osobistej działalności indywidualnej.</p>
+  <p><strong>Kontakt:</strong> <a class="contact-email" href="#">wzajac.contact [at] gmail.com</a></p>
+
+  <h2>2. Zakres</h2>
+  <p>Niniejsza polityka opisuje, jakie dane osobowe zbiera aplikacja Local Fold na iOS, w jakim celu je zbieramy oraz jakie prawa przysługują Ci w związku z tymi danymi.</p>
+
+  <h2>3. Jakie dane zbieramy</h2>
+
+  <h3>3.1 Dane konta</h3>
+  <p>Po zalogowaniu otrzymujemy od Twojego dostawcy uwierzytelniania:</p>
+  <ul>
+    <li><strong>Logowanie przez Apple:</strong> stabilny identyfikator użytkownika Apple oraz imię i adres e-mail, które zdecydujesz się udostępnić przy pierwszym logowaniu. Jeśli korzystasz z funkcji „Hide My Email" (Ukryj mój e-mail) Apple, otrzymujemy wyłącznie adres przekierowujący.</li>
+    <li><strong>Logowanie przez Google:</strong> nazwę Twojego konta Google, adres e-mail oraz adres URL zdjęcia profilowego.</li>
+  </ul>
+  <p>Dane te są przechowywane w Firebase Authentication oraz w naszej bazie Cloud Firestore w dokumencie użytkownika. Dokument użytkownika zawiera również wybrany kolor awatara oraz znacznik czasu utworzenia konta.</p>
+
+  <h3>3.2 Treści tworzone w aplikacji</h3>
+  <p>Korzystając z aplikacji, tworzysz treści, które są zapisywane w Cloud Firestore:</p>
+  <ul>
+    <li>Nazwa wyświetlana ustawiana w Twoim profilu</li>
+    <li>Grupy, które zakładasz, do których należysz lub do których jesteś zapraszany</li>
+    <li>Zapisy sesji pokerowych — wpłaty (buy-iny), wypłaty w trakcie sesji (cash-outy), końcowe stany żetonów oraz wynikowy bilans punktowy</li>
+    <li>Relacje członkostwa z innymi użytkownikami w Twoich grupach</li>
+  </ul>
+  <p>Te treści są udostępniane w czasie rzeczywistym pozostałym członkom tej samej grupy — to jest cel działania aplikacji.</p>
+
+  <h3>3.3 Dane diagnostyczne</h3>
+  <p>Korzystamy z Firebase Crashlytics do zbierania raportów o awariach:</p>
+  <ul>
+    <li>Losowo wygenerowany identyfikator instalacji (niepowiązany z Twoim kontem)</li>
+    <li>Model urządzenia, wersja systemu operacyjnego i wersja aplikacji</li>
+    <li>Ślady stosu (stack trace) z awarii oraz znaczniki czasu zdarzeń</li>
+    <li>Twój adres IP (wykorzystywany przez Google do celów bezpieczeństwa, niezachowywany przez nas)</li>
+  </ul>
+  <p>Dane o awariach pomagają nam naprawiać błędy. Nie są wykorzystywane do reklamy, profilowania ani śledzenia między aplikacjami. Crashlytics jest skonfigurowany tak, aby raporty o awariach nie były powiązane z Twoim kontem Local Fold; aplikacja nie przekazuje Twojego identyfikatora użytkownika do Crashlytics.</p>
+
+  <h3>3.4 Dane lokalne na urządzeniu</h3>
+  <p>Mała flaga określająca, czy ukończono onboarding, jest przechowywana lokalnie na Twoim urządzeniu w pamięci systemu operacyjnego. Te dane nie opuszczają urządzenia.</p>
+
+  <h3>3.5 Czego NIE zbieramy</h3>
+  <ul>
+    <li>Nie używamy zewnętrznych SDK analitycznych.</li>
+    <li>Nie używamy SDK reklamowych.</li>
+    <li>Nie śledzimy Cię w innych aplikacjach ani na stronach internetowych — App Tracking Transparency nie jest wywoływane, ponieważ takiego śledzenia nie prowadzimy.</li>
+    <li>Nie zbieramy, nie przetwarzamy ani nie przechowujemy informacji o płatnościach. Aplikacja używa nienazwanych jednostek punktowych i nie odnosi się do pieniędzy, walut ani żadnych jednostek pieniężnych.</li>
+  </ul>
+
+  <h2>4. Dlaczego przetwarzamy Twoje dane (podstawy prawne)</h2>
+  <ul>
+    <li><strong>Dane konta i treści w aplikacji:</strong> w celu świadczenia usługi, na którą się zarejestrowałeś. Podstawa prawna: wykonanie umowy (art. 6 ust. 1 lit. b RODO).</li>
+    <li><strong>Diagnostyka awarii:</strong> w celu utrzymania i poprawy stabilności aplikacji. Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).</li>
+  </ul>
+
+  <h2>5. Udostępnianie danych</h2>
+  <p>Udostępniamy dane następującym podmiotom przetwarzającym, które pomagają nam prowadzić aplikację:</p>
+  <ul>
+    <li><strong>Google LLC</strong> — Firebase Authentication, Cloud Firestore i Firebase Crashlytics. Zapewnia infrastrukturę chmurową, która przechowuje Twoje konto, treści w aplikacji i raporty o awariach.</li>
+    <li><strong>Apple Inc.</strong> — Sign in with Apple. Obsługuje uwierzytelnianie, jeśli wybierzesz logowanie przez Apple.</li>
+  </ul>
+  <p>Nie sprzedajemy Twoich danych. Nie udostępniamy ich reklamodawcom ani brokerom danych.</p>
+
+  <h2>6. Transfery międzynarodowe</h2>
+  <p>Usługi Firebase mogą przetwarzać dane na serwerach Google poza Europejskim Obszarem Gospodarczym, głównie w Stanach Zjednoczonych. Google opiera się na Standardowych Klauzulach Umownych zatwierdzonych przez Komisję Europejską w odniesieniu do takich transferów.</p>
+
+  <h2>7. Przechowywanie danych</h2>
+  <ul>
+    <li><strong>Dane konta i profilu:</strong> przechowywane tak długo, jak istnieje Twoje konto. Po usunięciu konta z poziomu aplikacji Twój dokument użytkownika i osobisty profil zostają usunięte z naszej bazy.</li>
+    <li><strong>Grupy, w których jesteś hostem:</strong> po usunięciu konta cała grupa — wraz z historią sesji, listą członków i niewykorzystanymi kodami zaproszeń — zostaje trwale usunięta.</li>
+    <li><strong>Grupy hostowane przez innych użytkowników:</strong> Twój wpis członkowski zostaje usunięty z każdej takiej grupy. Jednak historyczne zapisy sesji, w których brałeś udział (buy-iny, cash-outy, stany żetonów), pozostają wewnątrz tych sesji wraz z Twoją wyświetlaną nazwą i pseudonimowym identyfikatorem użytkownika Firebase z chwili sesji. Local Fold nie może edytować historii sesji należącej do innego użytkownika. Jeśli chcesz, aby takie zapisy zostały zmienione, skontaktuj się z nami pod podanym wyżej adresem e-mail — przekażemy żądanie odpowiedniemu hostowi grupy.</li>
+    <li><strong>Dane Crashlytics:</strong> przechowywane przez maksymalnie 90 dni zgodnie z domyślnym okresem przechowywania Crashlytics u Google.</li>
+  </ul>
+
+  <h2>8. Twoje prawa (RODO)</h2>
+  <p>Jeśli mieszkasz w Europejskim Obszarze Gospodarczym, masz prawo do:</p>
+  <ul>
+    <li>Dostępu do swoich danych osobowych</li>
+    <li>Żądania sprostowania nieprawidłowych danych</li>
+    <li>Żądania usunięcia danych (przepływ usuwania konta z poziomu aplikacji realizuje to dla większości kategorii — zob. punkt 7 dotyczący ograniczeń)</li>
+    <li>Ograniczenia lub sprzeciwu wobec przetwarzania</li>
+    <li>Przenoszenia danych — otrzymania kopii swoich danych w formacie nadającym się do odczytu maszynowego</li>
+    <li>Wniesienia skargi do polskiego organu nadzorczego (Urząd Ochrony Danych Osobowych, <a href="https://uodo.gov.pl">https://uodo.gov.pl</a>)</li>
+  </ul>
+  <p>Aby skorzystać z tych praw, skontaktuj się z nami pod adresem <a class="contact-email" href="#">wzajac.contact [at] gmail.com</a>. Aplikacja nie posiada obecnie zautomatyzowanego narzędzia eksportu — żądania dostępu i przenoszenia są realizowane ręcznie. Prosimy o uwzględnienie do 30 dni na odpowiedź, zgodnie z art. 12 ust. 3 RODO.</p>
+
+  <h2>9. Usunięcie konta</h2>
+  <p>Możesz w dowolnej chwili usunąć swoje konto z poziomu aplikacji: <strong>zakładka Profil → Usuń konto.</strong></p>
+  <p>Operacja ta:</p>
+  <ul>
+    <li>Usuwa Twój dokument użytkownika i osobisty profil z Cloud Firestore</li>
+    <li>Usuwa wszystkie grupy, w których jesteś hostem, wraz z ich sesjami, listą członków i niewykorzystanymi kodami zaproszeń</li>
+    <li>Usuwa Twój wpis członkowski z grup hostowanych przez innych użytkowników</li>
+    <li>Usuwa Twoje konto Firebase Authentication</li>
+    <li>Odłącza Local Fold od Twojego konta Google (cofa autoryzację Google OAuth)</li>
+    <li>Cofa token Sign in with Apple, jeśli ma to zastosowanie, zgodnie z wytyczną App Store 5.1.1(v)</li>
+    <li>Jest nieodwracalna</li>
+  </ul>
+  <p>Informacje o danych, które mogą pozostać w sesjach innych użytkowników po usunięciu konta — zob. punkt 7.</p>
+
+  <h2>10. Dzieci</h2>
+  <p>Local Fold nie jest skierowane do dzieci poniżej 16. roku życia. Świadomie nie zbieramy danych od osób nieletnich. Jeśli sądzisz, że mogliśmy to zrobić, prosimy o kontakt — usuniemy te dane.</p>
+
+  <h2>11. Bezpieczeństwo</h2>
+  <p>Dane przesyłane są chronione protokołem TLS dostarczanym przez system operacyjny i SDK Firebase. Dane w spoczynku w Cloud Firestore są szyfrowane przez Google. Dostęp do danych Twojej grupy jest kontrolowany przez reguły bezpieczeństwa Firestore, które przyznają prawo odczytu członkom grupy oraz prawo zapisu hostowi danej sesji.</p>
+  <p>Jeśli powzięliśmy wiadomość o naruszeniu danych osobowych, powiadomimy polski organ nadzorczy (UODO) w ciągu 72 godzin, zgodnie z art. 33 RODO. Jeśli naruszenie może powodować wysokie ryzyko dla Twoich praw, powiadomimy także Ciebie bez zbędnej zwłoki, zgodnie z art. 34 RODO.</p>
+
+  <h2>12. Zmiany w polityce</h2>
+  <p>Możemy aktualizować tę politykę, jeśli aplikacja się zmieni. Istotne zmiany będą odzwierciedlone w dacie „Ostatnia aktualizacja" oraz w wersji opublikowanej pod tym adresem URL. Zalecamy okresowe sprawdzanie polityki.</p>
+
+  <h2>13. Wyłączenie odpowiedzialności</h2>
+  <p>Local Fold jest udostępniane „w stanie, w jakim jest" (as is), bez żadnych gwarancji. Aplikacja pomaga zapisywać stany żetonów i weryfikować ich zgodność; nie przelewa pieniędzy, nie reguluje długów ani nie zastępuje żadnego wiążącego porozumienia między graczami. Zawsze potwierdź wynik rozliczenia z graczami przy stole, zanim się na nim oprzesz.</p>
+  <p>Local Fold nie jest usługą płatniczą, produktem finansowym ani usługą hazardową, a aplikacja nie ułatwia żadnej z tych aktywności. Liczby są śledzone jako nienazwane całkowite jednostki punktowe; aplikacja nie odnosi się do pieniędzy, walut ani żadnych jednostek pieniężnych.</p>
+  <p>W maksymalnym zakresie dozwolonym przez obowiązujące prawo deweloper wyłącza odpowiedzialność za jakiekolwiek szkody bezpośrednie, pośrednie, przypadkowe lub wtórne wynikające z korzystania lub niemożności korzystania z aplikacji — w tym za spory dotyczące wyników rozliczania sesji.</p>
+
+  <h2>14. Kontakt</h2>
+  <p>W sprawach prywatności: <strong><a class="contact-email" href="#">wzajac.contact [at] gmail.com</a></strong></p>
+
+  <p class="footer">© 2026 Wiktor Zając · <a href="./">Powrót do Local Fold</a></p>
+</main>
+<script>
+(function () {
+  var u = 'wzajac' + '.contact';
+  var d = 'gmail' + '.com';
+  var addr = u + '@' + d;
+  document.querySelectorAll('.contact-email').forEach(function (el) {
+    el.href = 'mai' + 'lto:' + addr;
+    el.textContent = addr;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Local Fold</title>
+  <meta name="description" content="Privacy policy for the Local Fold iOS app.">
+  <style>
+    :root {
+      --bg: #FAF7F1;
+      --bg-elev: #F4EFE5;
+      --ink: #14170F;
+      --ink-muted: #5A5E51;
+      --rule: rgba(20, 23, 15, 0.08);
+      --accent: #2E5326;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+      font-feature-settings: "tnum" 1, "lnum" 1;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 1.25;
+      margin: 40px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 1.3;
+      margin: 24px 0 8px;
+    }
+    p, ul, ol { margin: 0 0 16px; }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+    strong { color: var(--ink); }
+    .meta {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+    .lang-toggle {
+      color: var(--ink-muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      margin: 0 0 32px;
+    }
+    .lang-toggle strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .lang-toggle a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+    }
+    .lang-toggle a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+    .footer a { color: var(--ink-muted); }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14170F;
+        --bg-elev: #1C1F18;
+        --ink: #F0EDE5;
+        --ink-muted: #98998D;
+        --rule: rgba(240, 237, 229, 0.1);
+        --accent: #8FB87A;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Local Fold</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: May 7, 2026</p>
+  <p class="lang-toggle"><strong>EN</strong> · <a href="privacy_pl.html">PL</a></p>
+
+  <h2>1. Who we are</h2>
+  <p>Local Fold is developed by Wiktor Zając (Poland) as an independent developer. References to "we", "us", or "Local Fold" mean the developer in their individual capacity.</p>
+  <p><strong>Contact:</strong> <a class="contact-email" href="#">wzajac.contact [at] gmail.com</a></p>
+
+  <h2>2. Scope</h2>
+  <p>This policy describes the personal data Local Fold collects through its iOS application, why we collect it, and the rights you have over that data.</p>
+
+  <h2>3. What we collect</h2>
+
+  <h3>3.1 Account data</h3>
+  <p>When you sign in we receive the following from your authentication provider:</p>
+  <ul>
+    <li><strong>Sign in with Apple:</strong> a stable Apple user identifier; the name and email you choose to share at first sign-in. If you use Apple's "Hide My Email" relay we receive only the relay address.</li>
+    <li><strong>Sign in with Google:</strong> your Google account name, email address, and profile photo URL.</li>
+  </ul>
+  <p>This data is stored in Firebase Authentication and in our Cloud Firestore database under your user document. The user document also stores a chosen avatar color and the timestamp at which your account was first created.</p>
+
+  <h3>3.2 In-app content</h3>
+  <p>While using the app you create content that is saved to Cloud Firestore:</p>
+  <ul>
+    <li>Display name set in your profile</li>
+    <li>Groups you create, belong to, or are invited to</li>
+    <li>Live and historical poker session records: buy-ins, mid-session cash-outs, final chip counts, and the resulting point tally</li>
+    <li>Membership relationships with other users in your groups</li>
+  </ul>
+  <p>This content is shared in real time with other members of the same group — that sharing is the app's purpose.</p>
+
+  <h3>3.3 Diagnostic data</h3>
+  <p>We use Firebase Crashlytics to collect crash reports:</p>
+  <ul>
+    <li>A randomly generated installation identifier (not linked to your account)</li>
+    <li>Device model, operating system version, and app version</li>
+    <li>Crash stack traces and event timestamps</li>
+    <li>Your IP address (used by Google for security purposes and not retained by us)</li>
+  </ul>
+  <p>Crash data helps us fix bugs. It is not used for advertising, profiling, or cross-app tracking. Crashlytics is configured so that crash reports are not linked to your Local Fold account; the app does not pass your user identifier to Crashlytics.</p>
+
+  <h3>3.4 Local device data</h3>
+  <p>A small flag tracking whether you have completed onboarding is stored on your device using the operating system's local storage. This data does not leave your device.</p>
+
+  <h3>3.5 What we do NOT collect</h3>
+  <ul>
+    <li>We do not use third-party analytics SDKs.</li>
+    <li>We do not use advertising SDKs.</li>
+    <li>We do not track you across other apps or websites — App Tracking Transparency is not requested because we perform no such tracking.</li>
+    <li>We do not collect, process, or store payment information. The app uses unitless integer points and does not reference money, currency, or any monetary unit.</li>
+  </ul>
+
+  <h2>4. Why we use your data (legal bases)</h2>
+  <ul>
+    <li><strong>Account data and in-app content:</strong> to provide the service you signed up for. Legal basis: performance of a contract (GDPR Art. 6(1)(b)).</li>
+    <li><strong>Crash diagnostics:</strong> to maintain and improve app stability. Legal basis: legitimate interest (GDPR Art. 6(1)(f)).</li>
+  </ul>
+
+  <h2>5. Data sharing</h2>
+  <p>We share data with the following processors who help us operate the app:</p>
+  <ul>
+    <li><strong>Google LLC</strong> — Firebase Authentication, Cloud Firestore, and Firebase Crashlytics. Provides the cloud infrastructure that stores your account, app content, and crash reports.</li>
+    <li><strong>Apple Inc.</strong> — Sign in with Apple. Handles authentication when you choose Apple sign-in.</li>
+  </ul>
+  <p>We do not sell your data. We do not share your data with advertisers or data brokers.</p>
+
+  <h2>6. International transfers</h2>
+  <p>Firebase services may process data on Google's servers outside the European Economic Area, primarily in the United States. Google relies on Standard Contractual Clauses approved by the European Commission for these transfers.</p>
+
+  <h2>7. Data retention</h2>
+  <ul>
+    <li><strong>Account and profile data:</strong> retained for as long as your account exists. When you delete your account in the app, your user document and personal profile are removed from our database.</li>
+    <li><strong>Groups you host:</strong> when you delete your account, the entire group — including its session history, member roster, and pending invite codes — is permanently removed.</li>
+    <li><strong>Groups hosted by other users:</strong> your member entry is removed from each such group. However, historical session records you participated in (buy-ins, cash-outs, and chip counts) remain inside those sessions alongside your display name and pseudonymous Firebase user identifier as recorded at the time of the session. Local Fold cannot rewrite session history that another user owns. If you want such records altered, contact us at the email above and we will forward the request to the relevant group host.</li>
+    <li><strong>Crashlytics data:</strong> retained for up to 90 days per Google's default Crashlytics retention.</li>
+  </ul>
+
+  <h2>8. Your rights (GDPR)</h2>
+  <p>If you reside in the European Economic Area you have the right to:</p>
+  <ul>
+    <li>Access your personal data</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request erasure (the in-app account-deletion flow fulfills this for most categories — see Section 7 for limits)</li>
+    <li>Restrict or object to processing</li>
+    <li>Data portability — receive a machine-readable copy of your data</li>
+    <li>Lodge a complaint with the Polish data protection authority (Urząd Ochrony Danych Osobowych, <a href="https://uodo.gov.pl">https://uodo.gov.pl</a>)</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a class="contact-email" href="#">wzajac.contact [at] gmail.com</a>. There is no automated export tool inside the app today; access and portability requests are fulfilled manually. Please allow up to 30 days for a response, in line with GDPR Article 12(3).</p>
+
+  <h2>9. Account deletion</h2>
+  <p>You can delete your account at any time from inside the app: <strong>Profile tab → Delete account.</strong></p>
+  <p>This action:</p>
+  <ul>
+    <li>Deletes your user document and personal profile from Cloud Firestore</li>
+    <li>Deletes any groups you host, along with their sessions, member roster, and pending invite codes</li>
+    <li>Removes your member entry from groups hosted by other users</li>
+    <li>Deletes your Firebase Authentication account</li>
+    <li>Disconnects Local Fold from your Google account (revokes the Google OAuth grant)</li>
+    <li>Revokes your Apple Sign-In token where applicable, as required by App Store guideline 5.1.1(v)</li>
+    <li>Cannot be undone</li>
+  </ul>
+  <p>For data that may remain inside other users' sessions after deletion, see Section 7.</p>
+
+  <h2>10. Children</h2>
+  <p>Local Fold is not directed at children under 16. We do not knowingly collect data from minors. If you believe we may have done so, please contact us and we will remove the data.</p>
+
+  <h2>11. Security</h2>
+  <p>Data in transit is protected by TLS provided by the operating system and the Firebase SDKs. Data at rest in Cloud Firestore is encrypted by Google. Access to your group's data is gated by Firestore security rules that grant read access to group members and write access to the host of each session.</p>
+  <p>If we become aware of a personal data breach, we will notify the Polish supervisory authority (UODO) within 72 hours, as required by GDPR Article 33. If the breach is likely to result in a high risk to your rights, we will also notify you directly without undue delay (GDPR Article 34).</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We may update this policy if the app changes. Material changes will be reflected in the "Last updated" date and the published policy at this URL. We recommend reviewing the policy periodically.</p>
+
+  <h2>13. Disclaimer</h2>
+  <p>Local Fold is provided "as is", without warranty of any kind. The app helps you record chip counts and verify they reconcile; it does not move money, settle debts, or replace any binding agreement between players. Always confirm reconciliation results with the players at your table before relying on them.</p>
+  <p>Local Fold is not a payment service, a financial product, or a gambling service, and the app does not facilitate any of these. Counts are tracked as unitless integer points; the app does not reference money, currency, or any monetary unit.</p>
+  <p>To the maximum extent permitted by applicable law, the developer disclaims liability for any direct, indirect, incidental, or consequential loss arising from use of, or inability to use, the app — including any disputes over session reconciliation outcomes.</p>
+
+  <h2>14. Contact</h2>
+  <p>For privacy inquiries: <strong><a class="contact-email" href="#">wzajac.contact [at] gmail.com</a></strong></p>
+
+  <p class="footer">© 2026 Wiktor Zając · <a href="./">Back to Local Fold</a></p>
+</main>
+<script>
+(function () {
+  var u = 'wzajac' + '.contact';
+  var d = 'gmail' + '.com';
+  var addr = u + '@' + d;
+  document.querySelectorAll('.contact-email').forEach(function (el) {
+    el.href = 'mai' + 'lto:' + addr;
+    el.textContent = addr;
+  });
+})();
+</script>
+</body>
+</html>
