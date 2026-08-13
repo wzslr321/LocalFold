@@ -113,7 +113,7 @@
 <main>
   <p class="eyebrow">Local Fold</p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: May 7, 2026</p>
+  <p class="meta">Last updated: August 13, 2026</p>
   <p class="lang-toggle"><strong>EN</strong> · <a href="privacy_pl.html">PL</a></p>
 
   <h2>1. Who we are</h2>
@@ -184,8 +184,11 @@
   <h2>7. Data retention</h2>
   <ul>
     <li><strong>Account and profile data:</strong> retained for as long as your account exists. When you delete your account in the app, your user document and personal profile are removed from our database.</li>
-    <li><strong>Groups you host:</strong> when you delete your account, the entire group — including its session history, member roster, and pending invite codes — is permanently removed.</li>
-    <li><strong>Groups hosted by other users:</strong> your member entry is removed from each such group. However, historical session records you participated in (buy-ins, cash-outs, and chip counts) remain inside those sessions alongside your display name and pseudonymous Firebase user identifier as recorded at the time of the session. Local Fold cannot rewrite session history that another user owns. If you want such records altered, contact us at the email above and we will forward the request to the relevant group host.</li>
+    <li><strong>Groups you host, with no finished games:</strong> the entire group — including its member roster and pending invite code — is permanently removed, together with any game still in progress.</li>
+    <li><strong>Groups you host that have finished games:</strong> the group survives you and is handed to one of its remaining members, who becomes its host. This keeps the other players' own history readable to them. Your member entry and your place on the roster are removed, and any game still in progress is deleted. If no other member remains, nothing is left to preserve and the group is removed instead.</li>
+    <li><strong>Finished games, in any group:</strong> the financial record stays — buy-ins, cash-outs and chip counts are never altered, because they are other players' settled results as much as yours. Your identity is removed from them: your user identifier is deleted and your display name is replaced with "Deleted player" everywhere it was stored, including inside individual buy-in and cash-out entries.</li>
+    <li><strong>Groups hosted by other users:</strong> your member entry and your place on the roster are both removed, so the group is no longer visible to you.</li>
+    <li><strong>What remains identifiable:</strong> games you hosted keep your user identifier in a technical "host" field. It is not shown anywhere in the app, but it is not erased either. A game still in progress at the moment you delete your account, in a group hosted by someone else, keeps your display name and your user identifier even after it finishes — account deletion cannot rewrite a game that is still being played, and once your account is gone nothing runs later to clean it up. If you want either removed, contact us at the email above.</li>
     <li><strong>Crashlytics data:</strong> retained for up to 90 days per Google's default Crashlytics retention.</li>
   </ul>
 
@@ -206,13 +209,17 @@
   <p>This action:</p>
   <ul>
     <li>Deletes your user document and personal profile from Cloud Firestore</li>
-    <li>Deletes any groups you host, along with their sessions, member roster, and pending invite codes</li>
-    <li>Removes your member entry from groups hosted by other users</li>
+    <li>Deletes groups you host that have no finished games, along with their member roster and pending invite code</li>
+    <li>Hands groups you host that do have finished games to another member, and removes you from them — see Section 7</li>
+    <li>Removes your member entry and your roster place from groups hosted by other users</li>
+    <li>Replaces your name with "Deleted player" and deletes your user identifier throughout finished games, while leaving the amounts untouched</li>
     <li>Deletes your Firebase Authentication account</li>
     <li>Disconnects Local Fold from your Google account (revokes the Google OAuth grant)</li>
     <li>Revokes your Apple Sign-In token where applicable, as required by App Store guideline 5.1.1(v)</li>
     <li>Cannot be undone</li>
   </ul>
+  <p>If you sign in with Apple, you are asked to confirm your identity before anything is deleted. Backing out of that prompt cancels the whole operation and leaves your data intact.</p>
+  <p>If your data is removed but the Firebase Authentication account itself cannot be deleted — a network failure at the wrong moment, for example — the app tells you so rather than reporting success, and you stay signed in so you can try again.</p>
   <p>For data that may remain inside other users' sessions after deletion, see Section 7.</p>
 
   <h2>10. Children</h2>

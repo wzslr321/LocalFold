@@ -113,7 +113,7 @@
 <main>
   <p class="eyebrow">Local Fold</p>
   <h1>Polityka prywatności</h1>
-  <p class="meta">Ostatnia aktualizacja: 7 maja 2026 r.</p>
+  <p class="meta">Ostatnia aktualizacja: 13 sierpnia 2026 r.</p>
   <p class="lang-toggle"><a href="privacy.html">EN</a> · <strong>PL</strong></p>
 
   <h2>1. Kim jesteśmy</h2>
@@ -184,8 +184,11 @@
   <h2>7. Przechowywanie danych</h2>
   <ul>
     <li><strong>Dane konta i profilu:</strong> przechowywane tak długo, jak istnieje Twoje konto. Po usunięciu konta z poziomu aplikacji Twój dokument użytkownika i osobisty profil zostają usunięte z naszej bazy.</li>
-    <li><strong>Grupy, w których jesteś hostem:</strong> po usunięciu konta cała grupa — wraz z historią sesji, listą członków i niewykorzystanymi kodami zaproszeń — zostaje trwale usunięta.</li>
-    <li><strong>Grupy hostowane przez innych użytkowników:</strong> Twój wpis członkowski zostaje usunięty z każdej takiej grupy. Jednak historyczne zapisy sesji, w których brałeś udział (buy-iny, cash-outy, stany żetonów), pozostają wewnątrz tych sesji wraz z Twoją wyświetlaną nazwą i pseudonimowym identyfikatorem użytkownika Firebase z chwili sesji. Local Fold nie może edytować historii sesji należącej do innego użytkownika. Jeśli chcesz, aby takie zapisy zostały zmienione, skontaktuj się z nami pod podanym wyżej adresem e-mail — przekażemy żądanie odpowiedniemu hostowi grupy.</li>
+    <li><strong>Grupy, w których jesteś hostem, bez zakończonych gier:</strong> cała grupa — wraz z listą członków i niewykorzystanym kodem zaproszenia — zostaje trwale usunięta, razem z ewentualną grą będącą w toku.</li>
+    <li><strong>Grupy, w których jesteś hostem, z zakończonymi grami:</strong> grupa Cię przeżywa i zostaje przekazana jednemu z pozostałych członków, który staje się jej hostem. Dzięki temu pozostali gracze zachowują dostęp do własnej historii. Twój wpis członkowski i miejsce na liście zostają usunięte, a gra będąca w toku — skasowana. Jeśli nie ma żadnego innego członka, nie ma czego zachowywać i grupa zostaje usunięta.</li>
+    <li><strong>Zakończone gry, w każdej grupie:</strong> zapis finansowy pozostaje — buy-iny, cash-outy i stany żetonów nigdy nie są zmieniane, bo są rozliczonym wynikiem pozostałych graczy w takim samym stopniu jak Twoim. Usuwana jest z nich Twoja tożsamość: identyfikator użytkownika zostaje skasowany, a wyświetlana nazwa zastąpiona przez „Deleted player" wszędzie tam, gdzie była zapisana — także wewnątrz pojedynczych wpisów buy-in i cash-out.</li>
+    <li><strong>Grupy hostowane przez innych użytkowników:</strong> Twój wpis członkowski i miejsce na liście zostają usunięte, więc grupa przestaje być dla Ciebie widoczna.</li>
+    <li><strong>Co pozostaje identyfikowalne:</strong> gry, które prowadziłeś, zachowują Twój identyfikator użytkownika w technicznym polu „host". Nie jest on nigdzie pokazywany w aplikacji, ale nie jest też usuwany. Gra będąca w toku w chwili usunięcia konta, w grupie prowadzonej przez kogoś innego, zachowuje Twoją nazwę i identyfikator użytkownika także po jej zakończeniu — usunięcie konta nie może zmienić gry, która wciąż trwa, a gdy konta już nie ma, nie istnieje proces, który by te dane później wyczyścił. Jeśli chcesz, aby którekolwiek z tych danych zostały usunięte, skontaktuj się z nami pod podanym wyżej adresem e-mail.</li>
     <li><strong>Dane Crashlytics:</strong> przechowywane przez maksymalnie 90 dni zgodnie z domyślnym okresem przechowywania Crashlytics u Google.</li>
   </ul>
 
@@ -206,14 +209,18 @@
   <p>Operacja ta:</p>
   <ul>
     <li>Usuwa Twój dokument użytkownika i osobisty profil z Cloud Firestore</li>
-    <li>Usuwa wszystkie grupy, w których jesteś hostem, wraz z ich sesjami, listą członków i niewykorzystanymi kodami zaproszeń</li>
-    <li>Usuwa Twój wpis członkowski z grup hostowanych przez innych użytkowników</li>
+    <li>Usuwa grupy, w których jesteś hostem, a które nie mają zakończonych gier, wraz z listą członków i niewykorzystanym kodem zaproszenia</li>
+    <li>Przekazuje innemu członkowi grupy, w których jesteś hostem, a które mają zakończone gry, i usuwa Cię z nich — zob. punkt 7</li>
+    <li>Usuwa Twój wpis członkowski i miejsce na liście w grupach hostowanych przez innych użytkowników</li>
+    <li>Zastępuje Twoją nazwę przez „Deleted player" i usuwa Twój identyfikator użytkownika w zakończonych grach, pozostawiając kwoty nietknięte</li>
     <li>Usuwa Twoje konto Firebase Authentication</li>
     <li>Odłącza Local Fold od Twojego konta Google (cofa autoryzację Google OAuth)</li>
     <li>Cofa token Sign in with Apple, jeśli ma to zastosowanie, zgodnie z wytyczną App Store 5.1.1(v)</li>
     <li>Jest nieodwracalna</li>
   </ul>
-  <p>Informacje o danych, które mogą pozostać w sesjach innych użytkowników po usunięciu konta — zob. punkt 7.</p>
+  <p>Jeśli logujesz się przez Apple, przed usunięciem czegokolwiek prosimy o potwierdzenie tożsamości. Rezygnacja z tego kroku anuluje całą operację i pozostawia Twoje dane nienaruszone.</p>
+  <p>Jeśli dane zostaną usunięte, ale samego konta Firebase Authentication nie uda się skasować — na przykład przez błąd sieci w nieodpowiednim momencie — aplikacja poinformuje Cię o tym zamiast zgłaszać sukces, i pozostaniesz zalogowany, żeby móc spróbować ponownie.</p>
+  <p>Informacje o danych, które pozostają po usunięciu konta — zob. punkt 7.</p>
 
   <h2>10. Dzieci</h2>
   <p>Local Fold nie jest skierowane do dzieci poniżej 16. roku życia. Świadomie nie zbieramy danych od osób nieletnich. Jeśli sądzisz, że mogliśmy to zrobić, prosimy o kontakt — usuniemy te dane.</p>
